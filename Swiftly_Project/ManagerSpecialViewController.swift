@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ManagerSpecialViewController.swift
 //  Swiftly_Project
 //
 //  Created by Reid Weber on 1/29/20.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class ManagerSpecialViewController: UIViewController {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
 }
-
