@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		28317A1C23E22EE300FE2DB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A1B23E22EE300FE2DB1 /* AppDelegate.swift */; };
 		28317A1E23E22EE300FE2DB1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A1D23E22EE300FE2DB1 /* SceneDelegate.swift */; };
-		28317A2023E22EE300FE2DB1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A1F23E22EE300FE2DB1 /* ViewController.swift */; };
+		28317A2023E22EE300FE2DB1 /* ManagerSpecialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A1F23E22EE300FE2DB1 /* ManagerSpecialViewController.swift */; };
 		28317A2323E22EE300FE2DB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28317A2123E22EE300FE2DB1 /* Main.storyboard */; };
 		28317A2623E22EE300FE2DB1 /* Swiftly_Project.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28317A2423E22EE300FE2DB1 /* Swiftly_Project.xcdatamodeld */; };
 		28317A2823E22EE500FE2DB1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28317A2723E22EE500FE2DB1 /* Assets.xcassets */; };
 		28317A2B23E22EE500FE2DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28317A2923E22EE500FE2DB1 /* LaunchScreen.storyboard */; };
+		28317A3323E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		28317A1823E22EE200FE2DB1 /* Swiftly_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftly_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28317A1B23E22EE300FE2DB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		28317A1D23E22EE300FE2DB1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		28317A1F23E22EE300FE2DB1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		28317A1F23E22EE300FE2DB1 /* ManagerSpecialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialViewController.swift; sourceTree = "<group>"; };
 		28317A2223E22EE300FE2DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28317A2523E22EE300FE2DB1 /* Swiftly_Project.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Swiftly_Project.xcdatamodel; sourceTree = "<group>"; };
 		28317A2723E22EE500FE2DB1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		28317A2A23E22EE500FE2DB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		28317A2C23E22EE500FE2DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +62,8 @@
 			children = (
 				28317A1B23E22EE300FE2DB1 /* AppDelegate.swift */,
 				28317A1D23E22EE300FE2DB1 /* SceneDelegate.swift */,
-				28317A1F23E22EE300FE2DB1 /* ViewController.swift */,
+				28317A1F23E22EE300FE2DB1 /* ManagerSpecialViewController.swift */,
+				28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */,
 				28317A2123E22EE300FE2DB1 /* Main.storyboard */,
 				28317A2723E22EE500FE2DB1 /* Assets.xcassets */,
 				28317A2923E22EE500FE2DB1 /* LaunchScreen.storyboard */,
@@ -142,7 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				28317A2623E22EE300FE2DB1 /* Swiftly_Project.xcdatamodeld in Sources */,
-				28317A2023E22EE300FE2DB1 /* ViewController.swift in Sources */,
+				28317A3323E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift in Sources */,
+				28317A2023E22EE300FE2DB1 /* ManagerSpecialViewController.swift in Sources */,
 				28317A1C23E22EE300FE2DB1 /* AppDelegate.swift in Sources */,
 				28317A1E23E22EE300FE2DB1 /* SceneDelegate.swift in Sources */,
 			);
