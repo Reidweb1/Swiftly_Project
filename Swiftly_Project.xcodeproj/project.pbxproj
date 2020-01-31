@@ -16,6 +16,7 @@
 		28317A2B23E22EE500FE2DB1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28317A2923E22EE500FE2DB1 /* LaunchScreen.storyboard */; };
 		28317A3323E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */; };
 		28360D7323E38841006B1462 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360D7223E38841006B1462 /* NetworkController.swift */; };
+		28360D7523E4E63C006B1462 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360D7423E4E63C006B1462 /* CoreDataController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		28317A2C23E22EE500FE2DB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 		28360D7223E38841006B1462 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		28360D7423E4E63C006B1462 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 				28317A1F23E22EE300FE2DB1 /* ManagerSpecialViewController.swift */,
 				28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */,
 				28360D7223E38841006B1462 /* NetworkController.swift */,
+				28360D7423E4E63C006B1462 /* CoreDataController.swift */,
 				28317A2123E22EE300FE2DB1 /* Main.storyboard */,
 				28317A2723E22EE500FE2DB1 /* Assets.xcassets */,
 				28317A2923E22EE500FE2DB1 /* LaunchScreen.storyboard */,
@@ -150,6 +153,7 @@
 				28317A2623E22EE300FE2DB1 /* Swiftly_Project.xcdatamodeld in Sources */,
 				28317A3323E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift in Sources */,
 				28360D7323E38841006B1462 /* NetworkController.swift in Sources */,
+				28360D7523E4E63C006B1462 /* CoreDataController.swift in Sources */,
 				28317A2023E22EE300FE2DB1 /* ManagerSpecialViewController.swift in Sources */,
 				28317A1C23E22EE300FE2DB1 /* AppDelegate.swift in Sources */,
 				28317A1E23E22EE300FE2DB1 /* SceneDelegate.swift in Sources */,
