@@ -27,7 +27,6 @@ class CoreDataController: NSObject {
         let managedContext: NSManagedObjectContext = CoreDataController.getContext(persistentContainer)
         let entity = NSEntityDescription.entity(forEntityName: "SpecialItem", in: managedContext)!
         let item = NSManagedObject(entity: entity, insertInto: managedContext)
-        
         let uuid = UUID()
         
         item.setValue(Date(), forKeyPath: dateKey)
@@ -80,14 +79,29 @@ class CoreDataController: NSObject {
     /**
      * Delete the record provided.
      */
-    class func delete(_ template: NSManagedObject, _ persistentContainer: NSPersistentContainer? = nil) {
+    class func delete(_ item: NSManagedObject, _ persistentContainer: NSPersistentContainer? = nil) {
         let managedContext: NSManagedObjectContext = CoreDataController.getContext(persistentContainer)
-        managedContext.delete(template)
+        managedContext.delete(item)
         
         do {
             try managedContext.save()
         } catch let error as NSError {
             print("Could not save. \(error), \(error.userInfo)")
+        }
+    }
+    
+    class func delteAllItems() {
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        let context = delegate.persistentContainer.viewContext
+
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SpecialItem")
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+
+        do {
+            try context.execute(deleteRequest)
+            try context.save()
+        } catch let error as NSError {
+            print ("Error on delete all items. \(error)")
         }
     }
     

@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var specialItems: NSArray?
+    var specialItems: [NSManagedObject]?
     var canvasUnit: Int = 16
     
     private let reuseIdentifier = "SPECIAL_CELL"
@@ -22,21 +23,23 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
+        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+          flowLayout.estimatedItemSize = CGSize(width: 100, height: 100)
+        }
+        
         NetworkController.fetchData { (data, error) in
             let dataDictionary = (data as! NSDictionary)
-//            self.specialItems = (dataDictionary["managerSpecials"] as! NSArray)
             self.canvasUnit = (dataDictionary["canvasUnit"] as! Int)
-            self.saveItems((dataDictionary["managerSpecials"] as! NSArray))
             DispatchQueue.main.async {
-                self.collectionView.reloadData()
+                self.refreshItems((dataDictionary["managerSpecials"] as! NSArray))
             }
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ManagerSpecialCollectionViewCell
-        let item = (self.specialItems![indexPath.row] as! NSDictionary)
-        cell.newPriceLabel.text = (item["price"] as! String)
+        let item = (self.specialItems![indexPath.row] as! SpecialItem)
+        cell.newPriceLabel.text = item.price
         return cell
     }
     
@@ -52,8 +55,17 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         return CGRect(x: 20, y: 20, width: 100, height: 100)
     }
     
+    func refreshItems(_ items: NSArray) {
+        self.saveItems(items)
+        self.specialItems = CoreDataController.fetchItems()
+        self.collectionView.reloadData()
+    }
+    
     func saveItems(_ items: NSArray) {
-        
+        CoreDataController.delteAllItems()
+        for item in items {
+            CoreDataController.saveItem(item as! NSDictionary)
+        }
     }
     
 }
