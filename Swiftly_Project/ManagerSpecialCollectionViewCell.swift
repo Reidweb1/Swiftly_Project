@@ -15,5 +15,6 @@ class ManagerSpecialCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var originalPriceLabel: UILabel!
     @IBOutlet weak var newPriceLabel: UILabel!
     @IBOutlet weak var productLabel: UILabel!
-    
+    @IBOutlet weak var imageView: UIImageView!
+
 }
