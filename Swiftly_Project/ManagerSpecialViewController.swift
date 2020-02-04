@@ -37,11 +37,11 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         let item = (self.specialItems![indexPath.row] as! SpecialItem)
         
         cell.newPriceLabel.text = item.price
-        cell.letterLabel.text = "A"
+        cell.letterLabel.text = (item.displayName != nil) ? "" : String(item.displayName!.prefix(1))
         cell.originalPriceLabel.text = item.originalPrice
         cell.productLabel.text = item.displayName
         
-        cell.contentView.layer.cornerRadius = 2.0
+        cell.contentView.layer.cornerRadius = 4.0
         cell.contentView.layer.borderWidth = 1.0
         cell.contentView.layer.borderColor = UIColor.clear.cgColor
         cell.contentView.layer.masksToBounds = true
@@ -51,9 +51,6 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         cell.layer.shadowRadius = 2.0
         cell.layer.shadowOpacity = 1.0
         cell.layer.masksToBounds = false
-        
-        cell.layoutIfNeeded()
-        cell.layoutSubviews()
         
         return cell
     }
@@ -71,13 +68,11 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
     }
     
     func getSize(_ item: SpecialItem) -> CGSize {
-        let unit = (UIScreen.main.bounds.width - 16) / CGFloat(canvasUnit)
-        let maxDimension = UIScreen.main.bounds.width - 16
-        let minDimension = (UIScreen.main.bounds.width - 16) / 3
+        let unit = (UIScreen.main.bounds.width - 24) / CGFloat(canvasUnit)
+        let maxDimension = UIScreen.main.bounds.width - 24
+        let minDimension = (UIScreen.main.bounds.width - 32) / 3
         let width = unit * CGFloat(item.width)
         let height = unit * CGFloat(item.height)
-        print("Width \(width)")
-        print("Height \(height)")
         
         var finalWidth = (width > maxDimension) ? maxDimension : width
         finalWidth = (width < minDimension) ? minDimension : width
