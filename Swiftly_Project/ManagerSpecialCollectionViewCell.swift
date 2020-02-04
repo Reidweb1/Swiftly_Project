@@ -16,4 +16,7 @@ class ManagerSpecialCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var newPriceLabel: UILabel!
     @IBOutlet weak var productLabel: UILabel!
     
+    @IBOutlet weak var containerWidth: NSLayoutConstraint!
+    @IBOutlet weak var containerHeight: NSLayoutConstraint!
+
 }
