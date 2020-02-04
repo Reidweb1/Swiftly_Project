@@ -19,19 +19,19 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="64P-HD-IPw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="22T-j3-3oV">
                                     <size key="itemSize" width="394" height="105"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="headerReferenceSize" width="50" height="50"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SPECIAL_CELL" id="cAX-eP-IoB" customClass="ManagerSpecialCollectionViewCell" customModule="Swiftly_Project" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="394" height="105"/>
+                                        <rect key="frame" x="10" y="50" width="394" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WOb-Vq-dvS">
-                                            <rect key="frame" x="0.0" y="0.0" width="394" height="105"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="394" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6S-f3-0wV">
@@ -70,6 +70,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="62" id="4GG-Cr-6DA"/>
+                                                    </constraints>
                                                 </stackView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gcL-af-iaZ">
                                                     <rect key="frame" x="8" y="78" width="378" height="20.5"/>
@@ -78,9 +81,10 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="gcL-af-iaZ" secondAttribute="trailing" constant="8" id="BKe-SW-8Sl"/>
-                                                <constraint firstItem="gcL-af-iaZ" firstAttribute="top" secondItem="F7B-yX-Ekx" secondAttribute="bottom" constant="8" id="FCf-ir-Cn3"/>
+                                                <constraint firstItem="gcL-af-iaZ" firstAttribute="top" secondItem="F7B-yX-Ekx" secondAttribute="bottom" constant="8" id="CKd-4P-Tab"/>
                                                 <constraint firstItem="s6S-f3-0wV" firstAttribute="leading" secondItem="WOb-Vq-dvS" secondAttribute="leading" constant="8" id="HJ7-fI-xcb"/>
                                                 <constraint firstAttribute="trailing" secondItem="F7B-yX-Ekx" secondAttribute="trailing" constant="8" id="RjU-Dg-hS6"/>
                                                 <constraint firstItem="F7B-yX-Ekx" firstAttribute="leading" secondItem="s6S-f3-0wV" secondAttribute="trailing" constant="8" id="Zw0-wX-6mw"/>
@@ -89,7 +93,8 @@
                                                 <constraint firstItem="s6S-f3-0wV" firstAttribute="top" secondItem="WOb-Vq-dvS" secondAttribute="top" constant="8" id="hnm-OD-tTb"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="394" height="105"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="394" height="100"/>
                                         <connections>
                                             <outlet property="letterLabel" destination="tbm-g6-U1B" id="Bn8-fK-TqC"/>
                                             <outlet property="letterView" destination="s6S-f3-0wV" id="W71-KI-Rhq"/>
@@ -99,6 +104,23 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="SECTION_HEADER" id="iTz-rG-HDG">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager's Special" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5B-Fg-6ZY">
+                                            <rect key="frame" x="137" y="15" width="140" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.92156862745098034" green="0.92156862745098034" blue="0.92156862745098034" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="g5B-Fg-6ZY" firstAttribute="centerY" secondItem="iTz-rG-HDG" secondAttribute="centerY" id="SQy-JR-WuH"/>
+                                        <constraint firstItem="g5B-Fg-6ZY" firstAttribute="centerX" secondItem="iTz-rG-HDG" secondAttribute="centerX" id="pRZ-ba-O5W"/>
+                                    </constraints>
+                                </collectionReusableView>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

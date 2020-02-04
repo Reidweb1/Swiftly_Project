@@ -24,7 +24,8 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         self.collectionView.dataSource = self
         
         if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-          flowLayout.estimatedItemSize = CGSize(width: 100, height: 100)
+            let size = UIScreen.main.bounds
+            flowLayout.estimatedItemSize = CGSize(width: size.width - 16, height: 100)
         }
         
         NetworkController.fetchData { (data, error) in
@@ -39,7 +40,23 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ManagerSpecialCollectionViewCell
         let item = (self.specialItems![indexPath.row] as! SpecialItem)
+        
         cell.newPriceLabel.text = item.price
+        cell.letterLabel.text = "A"
+        cell.originalPriceLabel.text = item.originalPrice
+        cell.productLabel.text = item.displayName
+        
+        cell.contentView.layer.cornerRadius = 2.0
+        cell.contentView.layer.borderWidth = 1.0
+        cell.contentView.layer.borderColor = UIColor.clear.cgColor
+        cell.contentView.layer.masksToBounds = true;
+
+        cell.layer.shadowColor = UIColor.lightGray.cgColor
+        cell.layer.shadowOffset = CGSize(width:0,height: 2.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false;
+        
         return cell
     }
     

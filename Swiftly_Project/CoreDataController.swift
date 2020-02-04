@@ -32,6 +32,7 @@ class CoreDataController: NSObject {
         item.setValue(Date(), forKeyPath: dateKey)
         item.setValue(uuid.uuidString, forKeyPath: idKey)
         item.setValue(data["display_name"], forKey: displayNameKey)
+        item.setValue(data["original_price"], forKey: originalPriceKey)
         item.setValue(data["width"], forKey: widthKey)
         item.setValue(data["height"], forKey: heightKey)
         item.setValue(data["imageUrl"], forKey: imageUrlKey)
