@@ -17,8 +17,19 @@
 		28317A3323E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */; };
 		28360D7323E38841006B1462 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360D7223E38841006B1462 /* NetworkController.swift */; };
 		28360D7523E4E63C006B1462 /* CoreDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28360D7423E4E63C006B1462 /* CoreDataController.swift */; };
+		28E868B823EB64BF00EDEFE8 /* Swiftly_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E868B723EB64BF00EDEFE8 /* Swiftly_ProjectTests.swift */; };
 		28F8385623EA41FE00559E81 /* ImageView+Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F8385523EA41FE00559E81 /* ImageView+Async.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		28E868BA23EB64BF00EDEFE8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 28317A1023E22EE200FE2DB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 28317A1723E22EE200FE2DB1;
+			remoteInfo = Swiftly_Project;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		28317A1823E22EE200FE2DB1 /* Swiftly_Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Swiftly_Project.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -33,11 +44,21 @@
 		28317A3223E2455700FE2DB1 /* ManagerSpecialCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagerSpecialCollectionViewCell.swift; sourceTree = "<group>"; };
 		28360D7223E38841006B1462 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		28360D7423E4E63C006B1462 /* CoreDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataController.swift; sourceTree = "<group>"; };
+		28E868B523EB64BF00EDEFE8 /* Swiftly_ProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Swiftly_ProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E868B723EB64BF00EDEFE8 /* Swiftly_ProjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiftly_ProjectTests.swift; sourceTree = "<group>"; };
+		28E868B923EB64BF00EDEFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28F8385523EA41FE00559E81 /* ImageView+Async.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Async.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		28317A1523E22EE200FE2DB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E868B223EB64BF00EDEFE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -51,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				28317A1A23E22EE200FE2DB1 /* Swiftly_Project */,
+				28E868B623EB64BF00EDEFE8 /* Swiftly_ProjectTests */,
 				28317A1923E22EE200FE2DB1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -59,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				28317A1823E22EE200FE2DB1 /* Swiftly_Project.app */,
+				28E868B523EB64BF00EDEFE8 /* Swiftly_ProjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,6 +105,15 @@
 			path = Swiftly_Project;
 			sourceTree = "<group>";
 		};
+		28E868B623EB64BF00EDEFE8 /* Swiftly_ProjectTests */ = {
+			isa = PBXGroup;
+			children = (
+				28E868B723EB64BF00EDEFE8 /* Swiftly_ProjectTests.swift */,
+				28E868B923EB64BF00EDEFE8 /* Info.plist */,
+			);
+			path = Swiftly_ProjectTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -102,6 +134,24 @@
 			productReference = 28317A1823E22EE200FE2DB1 /* Swiftly_Project.app */;
 			productType = "com.apple.product-type.application";
 		};
+		28E868B423EB64BF00EDEFE8 /* Swiftly_ProjectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 28E868BE23EB64BF00EDEFE8 /* Build configuration list for PBXNativeTarget "Swiftly_ProjectTests" */;
+			buildPhases = (
+				28E868B123EB64BF00EDEFE8 /* Sources */,
+				28E868B223EB64BF00EDEFE8 /* Frameworks */,
+				28E868B323EB64BF00EDEFE8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				28E868BB23EB64BF00EDEFE8 /* PBXTargetDependency */,
+			);
+			name = Swiftly_ProjectTests;
+			productName = Swiftly_ProjectTests;
+			productReference = 28E868B523EB64BF00EDEFE8 /* Swiftly_ProjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,6 +164,10 @@
 				TargetAttributes = {
 					28317A1723E22EE200FE2DB1 = {
 						CreatedOnToolsVersion = 11.3.1;
+					};
+					28E868B423EB64BF00EDEFE8 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 28317A1723E22EE200FE2DB1;
 					};
 				};
 			};
@@ -131,6 +185,7 @@
 			projectRoot = "";
 			targets = (
 				28317A1723E22EE200FE2DB1 /* Swiftly_Project */,
+				28E868B423EB64BF00EDEFE8 /* Swiftly_ProjectTests */,
 			);
 		};
 /* End PBXProject section */
@@ -143,6 +198,13 @@
 				28317A2B23E22EE500FE2DB1 /* LaunchScreen.storyboard in Resources */,
 				28317A2823E22EE500FE2DB1 /* Assets.xcassets in Resources */,
 				28317A2323E22EE300FE2DB1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		28E868B323EB64BF00EDEFE8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,7 +226,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		28E868B123EB64BF00EDEFE8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E868B823EB64BF00EDEFE8 /* Swiftly_ProjectTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		28E868BB23EB64BF00EDEFE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 28317A1723E22EE200FE2DB1 /* Swiftly_Project */;
+			targetProxy = 28E868BA23EB64BF00EDEFE8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		28317A2123E22EE300FE2DB1 /* Main.storyboard */ = {
@@ -336,6 +414,46 @@
 			};
 			name = Release;
 		};
+		28E868BC23EB64BF00EDEFE8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHKMH85L4X;
+				INFOPLIST_FILE = Swiftly_ProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "RW.Swiftly-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiftly_Project.app/Swiftly_Project";
+			};
+			name = Debug;
+		};
+		28E868BD23EB64BF00EDEFE8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHKMH85L4X;
+				INFOPLIST_FILE = Swiftly_ProjectTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "RW.Swiftly-ProjectTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Swiftly_Project.app/Swiftly_Project";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -353,6 +471,15 @@
 			buildConfigurations = (
 				28317A3023E22EE500FE2DB1 /* Debug */,
 				28317A3123E22EE500FE2DB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		28E868BE23EB64BF00EDEFE8 /* Build configuration list for PBXNativeTarget "Swiftly_ProjectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				28E868BC23EB64BF00EDEFE8 /* Debug */,
+				28E868BD23EB64BF00EDEFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
