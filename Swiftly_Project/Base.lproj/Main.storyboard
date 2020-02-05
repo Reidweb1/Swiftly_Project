@@ -66,21 +66,13 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s6S-f3-0wV">
                                                             <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tbm-g6-U1B">
-                                                                    <rect key="frame" x="23.5" y="13.5" width="23.5" height="43"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
                                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="HQ6-TG-sRq">
                                                                     <rect key="frame" x="0.0" y="0.0" width="70" height="70"/>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </imageView>
                                                             </subviews>
-                                                            <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
-                                                                <constraint firstItem="tbm-g6-U1B" firstAttribute="centerX" secondItem="s6S-f3-0wV" secondAttribute="centerX" id="4Ng-Ab-oUy"/>
-                                                                <constraint firstItem="tbm-g6-U1B" firstAttribute="centerY" secondItem="s6S-f3-0wV" secondAttribute="centerY" id="6u3-ix-h5X"/>
                                                                 <constraint firstItem="HQ6-TG-sRq" firstAttribute="top" secondItem="s6S-f3-0wV" secondAttribute="top" id="UFh-Zz-kFf"/>
                                                                 <constraint firstItem="HQ6-TG-sRq" firstAttribute="leading" secondItem="s6S-f3-0wV" secondAttribute="leading" id="YUH-Kz-lkb"/>
                                                                 <constraint firstAttribute="height" constant="70" id="hto-bU-jCP"/>
@@ -125,7 +117,6 @@
                                         <size key="customSize" width="394" height="150"/>
                                         <connections>
                                             <outlet property="imageView" destination="HQ6-TG-sRq" id="O05-vD-UOl"/>
-                                            <outlet property="letterLabel" destination="tbm-g6-U1B" id="Bn8-fK-TqC"/>
                                             <outlet property="letterView" destination="s6S-f3-0wV" id="W71-KI-Rhq"/>
                                             <outlet property="newPriceLabel" destination="2Jh-T1-wJh" id="dTX-gy-cws"/>
                                             <outlet property="originalPriceLabel" destination="oar-HX-jfz" id="qYX-UF-g9Q"/>
@@ -161,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+            <point key="canvasLocation" x="-532" y="140"/>
         </scene>
     </scenes>
 </document>

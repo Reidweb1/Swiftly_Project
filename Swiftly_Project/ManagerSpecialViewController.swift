@@ -36,9 +36,16 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath as IndexPath) as! ManagerSpecialCollectionViewCell
         let item = (self.specialItems![indexPath.row] as! SpecialItem)
         
-        cell.newPriceLabel.text = item.price
-        cell.letterLabel.text = (item.displayName != nil) ? "" : String(item.displayName!.prefix(1))
-        cell.originalPriceLabel.text = item.originalPrice
+        if (item.imageUrl != nil) {
+            cell.imageView.asyncImage(item.imageUrl!)
+        }
+        
+        let original = (item.originalPrice != nil) ? "$" + item.originalPrice! : ""
+        let strikePrice: NSMutableAttributedString =  NSMutableAttributedString(string: original)
+        strikePrice.addAttribute(NSAttributedString.Key.strikethroughStyle, value: 2, range: NSMakeRange(0, strikePrice.length))
+        cell.originalPriceLabel.attributedText = strikePrice
+        
+        cell.newPriceLabel.text =  (item.price != nil) ? "$" + item.price! : ""
         cell.productLabel.text = item.displayName
         
         cell.contentView.layer.cornerRadius = 4.0
