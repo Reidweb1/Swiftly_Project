@@ -8,6 +8,10 @@
 
 import UIKit
 
+enum FetchDataError: Error {
+    case MissingData
+}
+
 class NetworkController: NSObject {
 
     static func fetchData(_ completion: @escaping (_ data: Any?, _ error: Error?) -> Void ) {
@@ -17,9 +21,14 @@ class NetworkController: NSObject {
                 completion(nil, error)
             }
             
+            print(response!)
+            
             do {
-                let jsonResult = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
-                completion(jsonResult, nil)
+                if (data != nil) {
+                    let jsonResult = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
+                    completion(jsonResult, nil)
+                }
+                throw FetchDataError.MissingData
                 
             } catch let jsonError {
                 completion(nil, jsonError)

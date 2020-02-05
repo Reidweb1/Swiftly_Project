@@ -11,6 +11,8 @@ import CoreData
 
 class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    var refreshControl = UIRefreshControl()
+    
     var specialItems: [NSManagedObject]?
     var canvasUnit: Int16 = 16
     
@@ -23,13 +25,8 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         
-        NetworkController.fetchData { (data, error) in
-            let dataDictionary = (data as! NSDictionary)
-            self.canvasUnit = (dataDictionary["canvasUnit"] as! Int16)
-            DispatchQueue.main.async {
-                self.refreshItems((dataDictionary["managerSpecials"] as! NSArray))
-            }
-        }
+        refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        reloadData()
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -95,14 +92,43 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         return self.getSize(item)
     }
     
+    func showAlert() {
+        let title: String = "An Error Occurred"
+        let message: String = "Sorry there was a problem fetching the special data. Try again"
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
+    @objc func reloadData() {
+        NetworkController.fetchData { (data, error) in
+            if (error != nil) {
+                DispatchQueue.main.async {
+                    self.fetchLocalItems()
+                    self.showAlert()
+                }
+                return
+            }
+            let dataDictionary = (data as! NSDictionary)
+            self.canvasUnit = (dataDictionary["canvasUnit"] as! Int16)
+            DispatchQueue.main.async {
+                self.refreshItems((dataDictionary["managerSpecials"] as! NSArray))
+            }
+        }
+    }
+    
     func refreshItems(_ items: NSArray) {
         self.saveItems(items)
+        self.fetchLocalItems()
+    }
+    
+    func fetchLocalItems() {
         self.specialItems = CoreDataController.fetchItems()
         self.collectionView.reloadData()
     }
     
     func saveItems(_ items: NSArray) {
-        CoreDataController.delteAllItems()
+        CoreDataController.deleteAllItems()
         for item in items {
             CoreDataController.saveItem(item as! NSDictionary)
         }

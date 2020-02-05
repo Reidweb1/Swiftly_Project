@@ -91,7 +91,7 @@ class CoreDataController: NSObject {
         }
     }
     
-    class func delteAllItems() {
+    class func deleteAllItems() {
         let delegate = UIApplication.shared.delegate as! AppDelegate
         let context = delegate.persistentContainer.viewContext
 
