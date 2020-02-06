@@ -63,6 +63,7 @@ class Swiftly_ProjectTests: XCTestCase {
         XCTAssertTrue((updatedModels.count == 1), "Make sure there is only record left")
     }
     
+    // Helper function to build dummy data
     private func getDummyData() -> NSMutableDictionary {
         var specials: [Any] = []
         
