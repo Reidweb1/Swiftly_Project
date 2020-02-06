@@ -24,8 +24,9 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         super.viewDidLoad()
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        
+
         refreshControl.addTarget(self, action: #selector(reloadData), for: .valueChanged)
+        self.collectionView.refreshControl = refreshControl
         reloadData()
     }
     
@@ -44,6 +45,8 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         
         cell.newPriceLabel.text =  (item.price != nil) ? "$" + item.price! : ""
         cell.productLabel.text = item.displayName
+        
+        self.sizeLabels(item, cell)
         
         cell.contentView.layer.cornerRadius = 4.0
         cell.contentView.layer.borderWidth = 1.0
@@ -71,20 +74,30 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         print("You selected cell #\(indexPath.item)!")
     }
     
-    func getSize(_ item: SpecialItem) -> CGSize {
+    func sizeLabels(_ item: SpecialItem, _ cell: ManagerSpecialCollectionViewCell) {
         let unit = (UIScreen.main.bounds.width - 24) / CGFloat(canvasUnit)
-        let maxDimension = UIScreen.main.bounds.width - 24
-        let minDimension = (UIScreen.main.bounds.width - 32) / 3
         let width = unit * CGFloat(item.width)
         let height = unit * CGFloat(item.height)
         
-        var finalWidth = (width > maxDimension) ? maxDimension : width
-        finalWidth = (width < minDimension) ? minDimension : width
+        let imageConstant = (width > height) ? height * 0.25 : width * 0.25
+        cell.imageWidth.constant = imageConstant
+        cell.imageHeight.constant = imageConstant
         
-        var finalHeight = (height > maxDimension) ? maxDimension : height
-        finalHeight = (height < minDimension) ? minDimension : height
+        print("THE VALUE??? \(height - (imageConstant + 24))")
+        cell.productLabelHeight.constant = height - (imageConstant + 24)
         
-        return CGSize(width: finalWidth, height: finalHeight)
+//        cell.newPriceLabel.font = cell.newPriceLabel.font.withSize(10)
+//        cell.originalPriceLabel.font = cell.originalPriceLabel.font.withSize(10)
+//
+//        cell.productLabel.font = cell.productLabel.font.withSize(6)
+    }
+    
+    func getSize(_ item: SpecialItem) -> CGSize {
+        let unit = (UIScreen.main.bounds.width - 24) / CGFloat(canvasUnit)
+        let width = unit * CGFloat(item.width)
+        let height = unit * CGFloat(item.height)
+        
+        return CGSize(width: width, height: height)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -125,6 +138,7 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
     func fetchLocalItems() {
         self.specialItems = CoreDataController.fetchItems()
         self.collectionView.reloadData()
+        self.collectionView.refreshControl!.endRefreshing()
     }
     
     func saveItems(_ items: NSArray) {
