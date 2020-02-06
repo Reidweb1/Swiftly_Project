@@ -15,21 +15,19 @@ enum FetchDataError: Error {
 class NetworkController: NSObject {
 
     static func fetchData(_ completion: @escaping (_ data: Any?, _ error: Error?) -> Void ) {
-        let url = URL(string: "https://prestoq.com/ios-coding-challenge")
+        let url = URL(string: "https://raw.githubusercontent.com/Swiftly-Systems/code-exercise-ios/master/backup")
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in
             if (error != nil) {
                 completion(nil, error)
             }
             
-            print(response!)
-            
             do {
                 if (data != nil) {
                     let jsonResult = try JSONSerialization.jsonObject(with: data!, options:.mutableContainers)
                     completion(jsonResult, nil)
+                } else {
+                    throw FetchDataError.MissingData
                 }
-                throw FetchDataError.MissingData
-                
             } catch let jsonError {
                 completion(nil, jsonError)
             }

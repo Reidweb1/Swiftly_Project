@@ -91,9 +91,8 @@ class CoreDataController: NSObject {
         }
     }
     
-    class func deleteAllItems() {
-        let delegate = UIApplication.shared.delegate as! AppDelegate
-        let context = delegate.persistentContainer.viewContext
+    class func deleteAllItems(_ persistentContainer: NSPersistentContainer? = nil) {
+        let context = CoreDataController.getContext(persistentContainer)
 
         let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "SpecialItem")
         let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
