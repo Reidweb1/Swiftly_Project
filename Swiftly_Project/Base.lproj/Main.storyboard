@@ -37,7 +37,7 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mxr-Kb-9Px">
                                                     <rect key="frame" x="8" y="8" width="378" height="134"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcL-af-iaZ">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gcL-af-iaZ">
                                                             <rect key="frame" x="0.0" y="78" width="378" height="56"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="56" id="chP-Gk-P6L"/>
@@ -45,7 +45,8 @@
                                                             <attributedString key="attributedText">
                                                                 <fragment content="Label">
                                                                     <attributes>
-                                                                        <font key="NSFont" metaFont="system" size="18"/>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="24" name="HelveticaNeue-Bold"/>
                                                                         <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                                                     </attributes>
                                                                 </fragment>
@@ -60,28 +61,51 @@
                                                                 <constraint firstAttribute="width" constant="70" id="N4O-mL-Pp9"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$2.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oar-HX-jfz">
-                                                            <rect key="frame" x="306" y="0.0" width="64" height="26.5"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.050000000000000003" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="anQ-hP-hNO">
+                                                            <rect key="frame" x="322" y="35" width="56" height="27"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="27" id="4LT-iT-zYm"/>
+                                                                <constraint firstAttribute="width" constant="56" id="IiD-rP-MWT"/>
+                                                            </constraints>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="$1.00">
+                                                                    <attributes>
+                                                                        <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$1.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.25" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jh-T1-wJh">
-                                                            <rect key="frame" x="309" y="34.5" width="61" height="26.5"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                                            <nil key="textColor"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" minimumScaleFactor="0.050000000000000003" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oar-HX-jfz">
+                                                            <rect key="frame" x="322" y="0.0" width="56" height="27"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="27" id="WIy-vD-xRF"/>
+                                                                <constraint firstAttribute="width" constant="56" id="hUq-ya-3sq"/>
+                                                            </constraints>
+                                                            <attributedString key="attributedText">
+                                                                <fragment content="$2.00">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" size="22" name="HelveticaNeue-Bold"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstItem="gcL-af-iaZ" firstAttribute="leading" secondItem="Mxr-Kb-9Px" secondAttribute="leading" id="9ZM-UN-1lT"/>
+                                                        <constraint firstAttribute="trailing" secondItem="oar-HX-jfz" secondAttribute="trailing" id="LKw-F2-Ekh"/>
                                                         <constraint firstItem="HQ6-TG-sRq" firstAttribute="leading" secondItem="Mxr-Kb-9Px" secondAttribute="leading" id="OWZ-Ek-wvi"/>
                                                         <constraint firstAttribute="trailing" secondItem="gcL-af-iaZ" secondAttribute="trailing" id="RD7-WQ-na5"/>
+                                                        <constraint firstItem="anQ-hP-hNO" firstAttribute="top" secondItem="oar-HX-jfz" secondAttribute="bottom" constant="8" id="eHq-1r-O4L"/>
+                                                        <constraint firstAttribute="trailing" secondItem="anQ-hP-hNO" secondAttribute="trailing" id="fmJ-X6-ACE"/>
                                                         <constraint firstAttribute="bottom" secondItem="gcL-af-iaZ" secondAttribute="bottom" id="p31-hS-fty"/>
                                                         <constraint firstItem="HQ6-TG-sRq" firstAttribute="top" secondItem="Mxr-Kb-9Px" secondAttribute="top" id="rDP-5V-D6G"/>
+                                                        <constraint firstItem="oar-HX-jfz" firstAttribute="top" secondItem="Mxr-Kb-9Px" secondAttribute="top" id="wA4-2B-SzN"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -104,7 +128,11 @@
                                             <outlet property="imageHeight" destination="03E-93-Lms" id="4P5-hE-0nx"/>
                                             <outlet property="imageView" destination="HQ6-TG-sRq" id="O05-vD-UOl"/>
                                             <outlet property="imageWidth" destination="N4O-mL-Pp9" id="kO2-J3-Cez"/>
-                                            <outlet property="newPriceLabel" destination="2Jh-T1-wJh" id="dTX-gy-cws"/>
+                                            <outlet property="newPriceHeight" destination="4LT-iT-zYm" id="Mku-N2-V1c"/>
+                                            <outlet property="newPriceLabel" destination="anQ-hP-hNO" id="QAx-z3-aSD"/>
+                                            <outlet property="newPriceWidth" destination="IiD-rP-MWT" id="HMz-ae-ERU"/>
+                                            <outlet property="oldPriceHeight" destination="WIy-vD-xRF" id="L94-PO-tu7"/>
+                                            <outlet property="oldPriceWidth" destination="hUq-ya-3sq" id="bbk-yw-Tcz"/>
                                             <outlet property="originalPriceLabel" destination="oar-HX-jfz" id="qYX-UF-g9Q"/>
                                             <outlet property="productLabel" destination="gcL-af-iaZ" id="Jws-35-Lju"/>
                                             <outlet property="productLabelHeight" destination="chP-Gk-P6L" id="GgE-D1-KmJ"/>
@@ -116,8 +144,8 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Manager's Special" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5B-Fg-6ZY">
-                                            <rect key="frame" x="120.5" y="13" width="173" height="24"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <rect key="frame" x="132" y="15" width="150" height="20.5"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -139,7 +167,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-533.33333333333337" y="139.95535714285714"/>
+            <point key="canvasLocation" x="-1239.1304347826087" y="161.38392857142856"/>
         </scene>
     </scenes>
 </document>

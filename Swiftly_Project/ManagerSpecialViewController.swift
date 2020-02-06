@@ -69,10 +69,6 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return (self.specialItems != nil) ? self.specialItems!.count : 0
     }
-
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("You selected cell #\(indexPath.item)!")
-    }
     
     func sizeLabels(_ item: SpecialItem, _ cell: ManagerSpecialCollectionViewCell) {
         let unit = (UIScreen.main.bounds.width - 24) / CGFloat(canvasUnit)
@@ -83,13 +79,12 @@ class ManagerSpecialViewController: UIViewController, UICollectionViewDataSource
         cell.imageWidth.constant = imageConstant
         cell.imageHeight.constant = imageConstant
         
-        print("THE VALUE??? \(height - (imageConstant + 24))")
         cell.productLabelHeight.constant = height - (imageConstant + 24)
         
-//        cell.newPriceLabel.font = cell.newPriceLabel.font.withSize(10)
-//        cell.originalPriceLabel.font = cell.originalPriceLabel.font.withSize(10)
-//
-//        cell.productLabel.font = cell.productLabel.font.withSize(6)
+        cell.oldPriceHeight.constant = imageConstant*0.5
+        cell.oldPriceWidth.constant = imageConstant
+        cell.newPriceHeight.constant = imageConstant*0.5
+        cell.newPriceWidth.constant = imageConstant
     }
     
     func getSize(_ item: SpecialItem) -> CGSize {

@@ -17,5 +17,9 @@ class ManagerSpecialCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageWidth: NSLayoutConstraint!
     @IBOutlet weak var imageHeight: NSLayoutConstraint!
     @IBOutlet weak var productLabelHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var newPriceHeight: NSLayoutConstraint!
+    @IBOutlet weak var newPriceWidth: NSLayoutConstraint!
+    @IBOutlet weak var oldPriceHeight: NSLayoutConstraint!
+    @IBOutlet weak var oldPriceWidth: NSLayoutConstraint!
+
 }
