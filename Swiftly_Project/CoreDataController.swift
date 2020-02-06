@@ -9,6 +9,7 @@
 import UIKit
 import CoreData
 
+// Keys used to match Core Data properties
 public let idKey: String = "id"
 public let dateKey: String = "createdAt"
 public let widthKey: String = "width"
@@ -53,8 +54,8 @@ class CoreDataController: NSObject {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SpecialItem")
         
         do {
-            let templates = try managedContext.fetch(fetchRequest)
-            return templates
+            let items = try managedContext.fetch(fetchRequest)
+            return items
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
             return []
@@ -69,8 +70,8 @@ class CoreDataController: NSObject {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "SpecialItem")
         fetchRequest.predicate = NSPredicate(format: "id == %@", id)
         do {
-            let template = try managedContext.fetch(fetchRequest)
-            return template.first
+            let item = try managedContext.fetch(fetchRequest)
+            return item.first
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
             return nil
@@ -91,6 +92,9 @@ class CoreDataController: NSObject {
         }
     }
     
+    /**
+     * Delete all records in the store.
+     */
     class func deleteAllItems(_ persistentContainer: NSPersistentContainer? = nil) {
         let context = CoreDataController.getContext(persistentContainer)
 

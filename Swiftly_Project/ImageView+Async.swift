@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ * Extension used to load an image from a url asyncronously
+ * then display the image in a UIImageView.
+ */
 extension UIImageView {
     
     func asyncImage(_ urlString: String) {

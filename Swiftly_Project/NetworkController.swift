@@ -8,12 +8,14 @@
 
 import UIKit
 
+// Custom error used in case data returned is `nil`
 enum FetchDataError: Error {
     case MissingData
 }
 
 class NetworkController: NSObject {
 
+    // Will fetch data from the server and execute the completion handler provided.
     static func fetchData(_ completion: @escaping (_ data: Any?, _ error: Error?) -> Void ) {
         let url = URL(string: "https://raw.githubusercontent.com/Swiftly-Systems/code-exercise-ios/master/backup")
         let task = URLSession.shared.dataTask(with: url!) {(data, response, error) in

@@ -10,6 +10,10 @@ import UIKit
 
 class ManagerSpecialCollectionViewCell: UICollectionViewCell {
     
+    /**
+    * Instance Variables and IBOutlets
+    */
+    
     @IBOutlet weak var originalPriceLabel: UILabel!
     @IBOutlet weak var newPriceLabel: UILabel!
     @IBOutlet weak var productLabel: UILabel!
